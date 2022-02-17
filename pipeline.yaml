@@ -37,17 +37,16 @@ stages:
           downloadType: 'single'
           artifactName: 'drop'
           downloadPath: '$(System.ArtifactsDirectory)'
-
-  - task: AzureCLI@2
-    displayName: 'deploy bicep template'
-    inputs:
-      azureSubscription: $(azureSubscription) 
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: |
-        az group create --name $(ResourceGroupName) --location $(location)
-        az deployment group create
-        --template-file $(Build.SourcesDirectory)/drop/module.bicep
-        --parameters $(Build.SourcesDirectory)/drop/main.parameters.json
-        --resource-group $(ResourceGroupName)
-        --parameters --location $(location)
+      - task: AzureCLI@2
+        displayName: 'deploy bicep template'
+        inputs:
+          azureSubscription: $(azureSubscription) 
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            az group create --name $(ResourceGroupName) --location $(location)
+            az deployment group create
+            --template-file $(Build.SourcesDirectory)/drop/module.bicep
+            --parameters $(Build.SourcesDirectory)/drop/main.parameters.json
+            --resource-group $(ResourceGroupName)
+            --parameters --location $(location)
