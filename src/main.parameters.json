@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters":{
+
+        "dataClassification": {
+            "value": "general"
+        },
+
+        "criticality": {
+            "value": "low"
+        },
+        
+        "costCentre": {
+            "value": "605-pricing"
+        },
+
+        "environment": {
+            "value": "dev"
+        },
+
+        "owner": {
+            "value": "damola@me.com"
+        },
+
+        "owningTeam": {
+            "value": "cloud-engineering"
+        },
+
+        "requester": {
+            "value": "ankit@me.com"
+        },
+        
+        "workload": {
+            "value": "guidewire"
+        },
+
+        "application": {
+            "value": "sql-filenet"
+        },
+
+        "poNumber": {
+            "value": "N/A"
+        },
+
+        "projectCode": {
+            "value": "987564"
+        }
+        
+
+
+    }
+}
