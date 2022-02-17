@@ -41,7 +41,7 @@ stages:
         displayName: 'deploy bicep template'
         inputs:
           azureSubscription: ToyWebsite
-          scriptType: 'bash'
+          scriptType: 'pscore'
           scriptLocation: 'inlineScript'
           inlineScript: |
             az group create --name $(ResourceGroupName) --location $(location)
