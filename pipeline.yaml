@@ -45,7 +45,7 @@ stages:
           scriptLocation: 'inlineScript'
           inlineScript: |
             az deployment group create  `
-                --template-file $(System.ArtifactsDirectory)/drop/module.bicep `
+                --template-file $(System.ArtifactsDirectory)/module.bicep `
                 --parameters $(System.ArtifactsDirectory)/main.parameters.json `
                 --resource-group $(ResourceGroupName) `
                 --parameters resourcePrefix=$(resourceprefix)
