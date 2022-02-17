@@ -40,7 +40,7 @@ stages:
       - task: AzureCLI@2
         displayName: 'deploy bicep template'
         inputs:
-          azureSubscription: $(azureSubscription) 
+          azureSubscription: ToyWebsite
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
