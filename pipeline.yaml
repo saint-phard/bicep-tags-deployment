@@ -24,6 +24,7 @@ stages:
             # Deploying Bicep file
             az deployment create \
               --name $(Build.BuildNumber) \
+              --location $(location)
               --resource-group $(ResourceGroupName) \
               --template-file $(Build.SourcesDirectory)/src/module.bicep \
               --parameters @$(Build.SourcesDirectory)/src/main.parameters.json \
