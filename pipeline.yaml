@@ -20,6 +20,6 @@ stages:
             # Deploying Bicep file
             az deployment sub create \
               --name $(Build.BuildNumber) \
-              --location $(location)
+              --location $(location) \
               --template-file $(Build.SourcesDirectory)/src/module.bicep \
               --parameters @$(Build.SourcesDirectory)/src/main.parameters.json
