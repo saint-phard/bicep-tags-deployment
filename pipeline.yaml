@@ -14,7 +14,7 @@ stages:
         inputs:
           SourceFolder: 'src'
           Contents: |
-            main.bicep
+            module.bicep
             main.parameters.json
           TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
