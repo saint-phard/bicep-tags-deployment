@@ -17,10 +17,6 @@ stages:
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
-            # Creating a resource group
-            az group create \
-              --name $(ResourceGroupName) \
-              --location $(location)
             # Deploying Bicep file
             az deployment create \
               --name $(Build.BuildNumber) \
