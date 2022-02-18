@@ -22,7 +22,7 @@ stages:
               --name $(ResourceGroupName) \
               --location $(location)
             # Deploying Bicep file
-            az deployment group create \
+            az deployment create \
               --name $(Build.BuildNumber) \
               --resource-group $(ResourceGroupName) \
               --template-file $(Build.SourcesDirectory)/src/module.bicep \
