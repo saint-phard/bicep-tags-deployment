@@ -40,12 +40,11 @@ stages:
       - task: AzureCLI@2
         displayName: 'deploy bicep template'
         inputs:
-          azureSubscription: ToyWebsite
-          scriptType: 'pscore'
+          azureSubscription: 'flash'
+          scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
-            az deployment group create  `
-                --template-file $(System.ArtifactsDirectory)/drop/module.bicep `
-                --parameters $(System.ArtifactsDirectory)/drop/main.parameters.json `
-                --resource-group $(ResourceGroupName) `
-                --parameters resourcePrefix=$(resourceprefix)
+            az deployment sub create  \
+                --template-file $(System.ArtifactsDirectory)/drop/module.bicep \
+                --parameters $(System.ArtifactsDirectory)/drop/main.parameters.json \
+                --location $(location)
