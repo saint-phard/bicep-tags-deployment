@@ -13,7 +13,7 @@ stages:
       - task: AzureCLI@2
         displayName: 'Deploy Bicep file'
         inputs:
-          azureSubscription: 'ToyWebsite'
+          azureSubscription: 'flash'
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
