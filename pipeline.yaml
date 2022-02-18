@@ -22,5 +22,4 @@ stages:
               --name $(Build.BuildNumber) \
               --location $(location)
               --template-file $(Build.SourcesDirectory)/src/module.bicep \
-              --parameters @$(Build.SourcesDirectory)/src/main.parameters.json \
-              --parameters location=$(location)
+              --parameters @$(Build.SourcesDirectory)/src/main.parameters.json
